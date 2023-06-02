@@ -1,0 +1,16 @@
+version: 0
+os: linux
+files:
+  - source: 
+    destination:
+    overwrite: true   
+file_exists_behavior:
+hooks:
+  AfterInstall:
+    - location: 
+      timeout:
+      runas: 
+  ApplicationStart:
+    - location: 
+      timeout:
+      runas: 
