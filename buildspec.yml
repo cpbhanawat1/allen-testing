@@ -1,16 +1,13 @@
-version: 0
-os: linux
-files:
-  - source: 
-    destination:
-    overwrite: true   
-file_exists_behavior:
-hooks:
-  AfterInstall:
-    - location: 
-      timeout:
-      runas: 
-  ApplicationStart:
-    - location: 
-      timeout:
-      runas: 
+version: 0.2
+
+phases:
+    build: 
+      commands:
+      - echo "this is build phase..."
+
+    post_build:
+       commands:
+      - echo "deployed to s3"
+artifacts:
+    files:
+      - '**/*'
